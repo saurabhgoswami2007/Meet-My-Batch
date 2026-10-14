@@ -1,0 +1,148 @@
+.app-shell {
+  width: 100%;
+  max-width: 1312px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  box-sizing: border-box;
+}
+
+.page-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.header-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.page-header h1 {
+  margin: 0;
+  color: #333;
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.2;
+}
+
+.header-subtitle {
+  margin: 0;
+  color: #747474;
+  font-size: 0.98rem;
+}
+
+.student-section {
+  width: 100%;
+}
+
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 30px;
+  width: 100%;
+}
+
+.student-card {
+  display: flex;
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  padding: 22px;
+  overflow: hidden;
+  border: 2px solid #c9cccf;
+  border-radius: 16px;
+  background: #e9eaeb;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.student-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 rgba(59, 59, 59, 0.18);
+}
+
+.student-emoji {
+  display: grid;
+  width: 58px;
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+  place-items: center;
+  margin-bottom: 12px;
+  border: 1px solid #d2d4d6;
+  border-radius: 50%;
+  background: #f6f6f6;
+  font-size: 1.65rem;
+}
+
+.student-name {
+  margin: 0 0 2px;
+  color: #303234;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.student-city {
+  margin: 0 0 10px;
+  color: #777b7e;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.student-funfact {
+  flex: 1;
+  min-width: 0;
+  margin: 0 0 16px;
+  color: #55595c;
+  font-size: 0.92rem;
+  overflow-wrap: anywhere;
+}
+
+.student-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.student-skill {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #d0d2d4;
+  border-radius: 999px;
+  background: #f4f4f4;
+  color: #515457;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 5px 10px;
+}
+
+@media (max-width: 900px) {
+  .student-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-shell {
+    padding: 40px 16px;
+  }
+
+  .student-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .student-card {
+    min-height: 220px;
+    padding: 20px;
+  }
+}
